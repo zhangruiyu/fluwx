@@ -1,7 +1,7 @@
 #include "AppDelegate.h"
 #include "GeneratedPluginRegistrant.h"
-#include <fluwx_no_pay/FluwxResponseHandler.h>
-#include <fluwx_no_pay/WXApi.h>
+#include "FluwxResponseHandler.h"
+#include "WXApi.h"
 
 @implementation AppDelegate
 
