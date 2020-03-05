@@ -6,7 +6,8 @@
 //
 
 #import "FluwxAutoDeductHandler.h"
-#import <WXApiRequestHandler.h>
+#import "WXApiRequestHandler.h"
+#import "WXApi.h"
 
 @implementation FluwxAutoDeductHandler {
     NSObject <FlutterPluginRegistrar> *_fluwxRegistrar;
@@ -20,7 +21,6 @@
 }
 
 - (void)handleAutoDeductWithCall:(FlutterMethodCall *)call result:(FlutterResult)result {
-    NSDictionary *params = call.arguments;
     NSMutableDictionary *paramsFromDart = [NSMutableDictionary dictionaryWithDictionary:call.arguments];
     [paramsFromDart removeObjectForKey:@"businessType"];
     WXOpenBusinessWebViewReq *req = [[WXOpenBusinessWebViewReq alloc] init];

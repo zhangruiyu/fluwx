@@ -1,4 +1,7 @@
-## FLuwx  ![pub package](https://img.shields.io/pub/v/fluwx.svg)
+# Fluwx 
+![pub package](https://img.shields.io/pub/v/fluwx.svg)
+[![Build status](https://img.shields.io/cirrus/github/OpenFlutter/fluwx/master)](https://cirrus-ci.com/github/OpenFlutter/fluwx)
+======
 
 ![logo](./arts/fluwx_logo.png)
 
@@ -60,7 +63,8 @@ dependencies:
      import 'package:fluwx_no_pay/fluwx_no_pay.dart' as fluwx;
      fluwx.registerWxApi(appId:"wxd930ea5d5a258f4f",universalLink:"https://your.univeral.link.com/placeholder/");
  ```
-如果你想通过fluwx在iOS端注册微信，请务必提供 `universalLink` ，否则无视这句话.
+如果你想通过fluwx在iOS端注册微信，请务必提供 `universalLink` ，否则无视这句话。乱填`universalLink`会导致iOS端微信SDK无法正常初始化!!!
+
 
 
 > 注意：尽管可以通过Fluwx完成微信注册，但一些操作依然需要在对应平台进行设置，如配置iOS的*URLSchema,LSApplicationQueriesSchemes,universal link*等。

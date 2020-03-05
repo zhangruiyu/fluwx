@@ -5,11 +5,10 @@
 #import <Foundation/Foundation.h>
 #import <Flutter/Flutter.h>
 #import "FluwxPlugin.h"
-#import "WXApi.h"
 #import "WXApiRequestHandler.h"
 #import "WechatAuthSDK.h"
 
-@class StringUtil;
+@class FluwxStringUtil;
 
 @interface FluwxAuthHandler : NSObject <WechatAuthAPIDelegate>
 - (instancetype)initWithRegistrar:(NSObject <FlutterPluginRegistrar> *)registrar methodChannel:(FlutterMethodChannel *)flutterMethodChannel;

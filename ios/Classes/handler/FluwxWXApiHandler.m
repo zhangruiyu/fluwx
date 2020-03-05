@@ -4,11 +4,11 @@
 
 
 #import "FluwxWXApiHandler.h"
-#import "StringUtil.h"
+#import "FluwxStringUtil.h"
 #import "FluwxPlugin.h"
 #import "CallResults.h"
-#import "WXApi.h"
 #import "FluwxKeys.h"
+#import "WXApi.h"
 
 @implementation FluwxWXApiHandler
 - (void)registerApp:(FlutterMethodCall *)call result:(FlutterResult)result {
@@ -23,14 +23,14 @@
     }
 
     NSString *appId = call.arguments[@"appId"];
-    if ([StringUtil isBlank:appId]) {
+    if ([FluwxStringUtil isBlank:appId]) {
         result([FlutterError errorWithCode:@"invalid app id" message:@"are you sure your app id is correct ? " details:appId]);
         return;
     }
 
     NSString *universalLink = call.arguments[@"universalLink"];
 
-    if ([StringUtil isBlank:universalLink]) {
+    if ([FluwxStringUtil isBlank:universalLink]) {
         result([FlutterError errorWithCode:@"invalid universal link" message:@"are you sure your universal link is correct ? " details:universalLink]);
         return;
     }

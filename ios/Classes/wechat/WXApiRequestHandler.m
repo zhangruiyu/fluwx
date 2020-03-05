@@ -10,7 +10,8 @@
 #import "WXApiRequestHandler.h"
 #import "SendMessageToWXReq+requestWithTextOrMediaMessage.h"
 #import "WXMediaMessage+messageConstruct.h"
-#import "StringUtil.h"
+#import "FluwxStringUtil.h"
+#import "WXApiObject.h"
 
 @implementation WXApiRequestHandler
 
@@ -97,7 +98,7 @@
           completion:(void (^ __nullable)(BOOL success))completion {
     WXMusicObject *ext = [WXMusicObject object];
 
-    if ([StringUtil isBlank:musicURL]) {
+    if ([FluwxStringUtil isBlank:musicURL]) {
         ext.musicLowBandUrl = musicLowBandUrl;
         ext.musicLowBandDataUrl = (musicLowBandDataUrl == (id) [NSNull null]) ? nil : musicLowBandDataUrl;
     } else {
@@ -141,7 +142,7 @@
     [message setThumbImage:thumbImage];
 
     WXVideoObject *ext = [WXVideoObject object];
-    if ([StringUtil isBlank:videoURL]) {
+    if ([FluwxStringUtil isBlank:videoURL]) {
         ext.videoLowBandUrl = videoLowBandUrl;
     } else {
         ext.videoUrl = videoURL;
@@ -187,7 +188,7 @@
     [message setThumbImage:thumbImage];
 
     WXFileObject *ext = [WXFileObject object];
-    ext.fileExtension = @"pdf";
+    ext.fileExtension = extension;
     ext.fileData = fileData;
 
     message.mediaObject = ext;
