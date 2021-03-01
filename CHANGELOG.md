@@ -1,3 +1,6 @@
+## 2.5.2
+* Fix #338 on Android
+
 ## 2.5.1+1
 * Nothing
 
